@@ -1,0 +1,18 @@
+{
+  "name": "iotdevice",
+  "version": "1.0.0",
+  "description": "A system that leverages Ethereum platform for identity, authentication and reputation of IoT devices. Devices are registered in a smart contract via a web interface and send cryptographically signed messages to a platform that validates them using blockchain.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.9",
+    "dotenv": "^16.0.1"
+  }
+}
