@@ -1,18 +1,8 @@
 pragma solidity ^0.5.0;
 
-/**
- * @title Elliptic curve signature operations
- * @dev Based on https://gist.github.com/axic/5b33912c6f61ae6fd96d6c4a47afde6d
- * TODO Remove this library once solidity supports passing a signature to ecrecover.
- * See https://github.com/ethereum/solidity/issues/864
- * Source: https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/ECRecovery.sol
- */
+
 library ECRecovery {
-    /**
-     * @dev Recover signer address from a message by using their signature
-     * @param _hash bytes32 message, the hash is the signed message. What is recovered is the signer address.
-     * @param _signature bytes signature, the signature is generated using web3.eth.sign()
-     */
+   
     function recover(bytes32 _hash, bytes memory _signature)
         internal
         pure
@@ -51,9 +41,7 @@ library ECRecovery {
         }
     }
 
-    /**
-     * @dev prefix a bytes32 value with "\x19Ethereum Signed Message:" and hash the result
-     */
+    
     function toEthSignedMessageHash(bytes32 _hash)
         internal
         pure
