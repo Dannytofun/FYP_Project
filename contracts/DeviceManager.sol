@@ -3,26 +3,21 @@ pragma solidity ^0.5.0;
 import "./MerkleProof.sol";
 import "./ECRecovery.sol";
 
-/**
- * @title Provides base functionalities for entities.
- */
+
 contract EntityBase {
-    /// @dev Entity in the device management system.
+   
     struct Entity {
-        // Arbitary data in case entity wants to have some public information available.
+       
         string data;
     }
 
-    /// @notice Maps owner to an Entity structure.
+    
     mapping (address => Entity) public ownerToEntity;
 
-    /// @dev Fired on entity data update.
+    
     event EntityDataUpdated(address indexed owner, string newData);
 
-    /**
-     * @notice Update entity data.
-     * @param _data Entity data.
-     */
+   
     function updateEntityData(string memory _data) public {
         ownerToEntity[msg.sender].data = _data;
 
@@ -30,9 +25,7 @@ contract EntityBase {
     }
 }
 
-/**
- * @title Provides base functionalities for devices.
- */
+
 contract DeviceBase {
     
     struct Device {
